@@ -1,0 +1,383 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins', sans-serif;
+
+    background:#0b1120;
+
+    color:white;
+
+    display:flex;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+
+    width:260px;
+
+    height:100vh;
+
+    position:fixed;
+
+    background:rgba(15,23,42,0.95);
+
+    backdrop-filter:blur(20px);
+
+    border-right:1px solid rgba(255,255,255,0.08);
+
+    padding:50px 30px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.logo{
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    margin-bottom:60px;
+
+    background:linear-gradient(
+        90deg,
+        #8b5cf6,
+        #ec4899
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar li{
+    margin:25px 0;
+}
+
+.sidebar a{
+
+    text-decoration:none;
+
+    color:#cbd5e1;
+
+    font-size:1.1rem;
+
+    transition:0.3s;
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.sidebar a:hover{
+
+    color:#c084fc;
+
+    transform:translateX(10px);
+}
+
+/* MAIN */
+
+main{
+    margin-left:260px;
+    width:100%;
+}
+
+/* HERO */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+
+    padding:100px;
+
+    background:
+    radial-gradient(
+        circle at top right,
+        rgba(168,85,247,0.3),
+        transparent 30%
+    ),
+
+    radial-gradient(
+        circle at bottom left,
+        rgba(236,72,153,0.2),
+        transparent 30%
+    );
+}
+
+.tag{
+
+    background:rgba(168,85,247,0.15);
+
+    color:#c084fc;
+
+    padding:10px 20px;
+
+    border-radius:50px;
+
+    display:inline-block;
+
+    margin-bottom:30px;
+}
+
+.hero h1{
+
+    font-size:5rem;
+
+    line-height:1;
+}
+
+.hero h1 span{
+
+    display:block;
+
+    color:#c084fc;
+}
+
+.descripcion{
+
+    margin-top:30px;
+
+    max-width:650px;
+
+    line-height:1.8;
+
+    color:#cbd5e1;
+
+    font-size:1.1rem;
+}
+
+/* BOTONES */
+
+.botones{
+    margin-top:40px;
+}
+
+.btn-main{
+
+    background:linear-gradient(
+        90deg,
+        #8b5cf6,
+        #ec4899
+    );
+
+    border:none;
+
+    padding:14px 35px;
+
+    border-radius:15px;
+
+    color:white;
+
+    font-weight:600;
+
+    margin-right:15px;
+}
+
+.btn-main:hover{
+    opacity:0.9;
+}
+
+/* SECCIONES */
+
+section{
+    padding:100px;
+}
+
+.titulo{
+
+    font-size:3rem;
+
+    margin-bottom:50px;
+}
+
+/* CARDS */
+
+.card-modern{
+
+    background:rgba(255,255,255,0.05);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    padding:40px;
+
+    border-radius:25px;
+
+    backdrop-filter:blur(20px);
+
+    transition:0.3s;
+}
+
+.card-modern:hover{
+
+    transform:translateY(-10px);
+}
+
+/* SKILLS */
+
+.skills-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+}
+
+.skill-card{
+
+    background:#111827;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    transition:0.3s;
+
+    border:1px solid rgba(255,255,255,0.05);
+}
+
+.skill-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#8b5cf6;
+}
+
+.skill-card i{
+
+    font-size:2.5rem;
+
+    color:#c084fc;
+
+    margin-bottom:20px;
+}
+
+/* TIMELINE */
+
+.timeline{
+
+    border-left:3px solid #8b5cf6;
+
+    padding-left:40px;
+}
+
+.timeline-item{
+
+    margin-bottom:50px;
+
+    position:relative;
+}
+
+.timeline-item::before{
+
+    content:"";
+
+    width:18px;
+    height:18px;
+
+    border-radius:50%;
+
+    background:#c084fc;
+
+    position:absolute;
+
+    left:-50px;
+    top:5px;
+}
+
+.timeline span{
+
+    color:#c084fc;
+
+    display:block;
+
+    margin:10px 0;
+}
+
+/* IDIOMAS */
+
+.idiomas{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+}
+
+.idioma{
+
+    background:#111827;
+
+    padding:20px 30px;
+
+    border-radius:20px;
+
+    font-weight:600;
+}
+
+.idioma span{
+
+    display:block;
+
+    color:#c084fc;
+
+    margin-top:10px;
+}
+
+/* FOOTER */
+
+footer{
+
+    text-align:center;
+
+    padding:50px;
+
+    color:#94a3b8;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .sidebar{
+        display:none;
+    }
+
+    main{
+        margin-left:0;
+    }
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    section{
+        padding:50px 30px;
+    }
+
+    .hero{
+        padding:50px 30px;
+    }
+
+}
